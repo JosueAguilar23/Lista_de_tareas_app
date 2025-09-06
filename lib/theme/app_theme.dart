@@ -4,34 +4,45 @@ class AppTheme {
   static ThemeData light() {
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+      scaffoldBackgroundColor: const Color(0xFFF9FAFB),
       textTheme: const TextTheme(
         displayLarge: TextStyle(fontFamily: 'Nunito'),
         displayMedium: TextStyle(fontFamily: 'Nunito'),
         displaySmall: TextStyle(fontFamily: 'Nunito'),
         headlineMedium: TextStyle(fontFamily: 'Nunito'),
         headlineSmall: TextStyle(fontFamily: 'Nunito'),
-        titleLarge: TextStyle(fontFamily: 'Nunito'),
-        titleMedium: TextStyle(fontFamily: 'Nunito'),
-        titleSmall: TextStyle(fontFamily: 'Nunito'),
-        bodyLarge: TextStyle(fontFamily: 'Nunito'),
-        bodyMedium: TextStyle(fontFamily: 'Nunito'),
-        bodySmall: TextStyle(fontFamily: 'Nunito'),
-        labelLarge: TextStyle(fontFamily: 'Nunito'),
-        labelSmall: TextStyle(fontFamily: 'Nunito'),
+        titleLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700),
+        titleMedium: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        titleSmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        bodyLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w500),
+        bodyMedium: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
+        bodySmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
+        labelLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        labelSmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
       ),
     );
   }
 
   static ThemeData dark() {
-    final baseDark = ThemeData(brightness: Brightness.dark);
     return ThemeData(
       useMaterial3: true,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.indigo,
-        brightness: Brightness.dark,
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: Colors.black,
+      textTheme: const TextTheme(
+        displayLarge: TextStyle(fontFamily: 'Nunito'),
+        displayMedium: TextStyle(fontFamily: 'Nunito'),
+        displaySmall: TextStyle(fontFamily: 'Nunito'),
+        headlineMedium: TextStyle(fontFamily: 'Nunito'),
+        headlineSmall: TextStyle(fontFamily: 'Nunito'),
+        titleLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w700),
+        titleMedium: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        titleSmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        bodyLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w500),
+        bodyMedium: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
+        bodySmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
+        labelLarge: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w600),
+        labelSmall: TextStyle(fontFamily: 'Nunito', fontWeight: FontWeight.w400),
       ),
-      textTheme: baseDark.textTheme.apply(fontFamily: 'Nunito'),
     );
   }
 }
